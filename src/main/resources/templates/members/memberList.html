@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>이름</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}"><!--Model에 members라는 key가 있으면 반복문 실행-->
+                <td th:text="${member.id}"></td>
+                <!--getter 방식으로 접근-->
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!--container-->
+</body>
+</html>
