@@ -28,6 +28,7 @@ public class MemberController {
     //중간에 바꿀 방법이 없기 때문에 좋은 방법은 아니다.
     public MemberController(MemberService memberService){ //->생성자를 통한 주입
         this.memberService=memberService;
+        System.out.println("memberService : "+memberService.getClass()); //복제된 memberService 출력됨
         //java: cannot find symbol
         //  symbol: variable memberService ->스프링이 MemberService를 찾을 수 없음.
 

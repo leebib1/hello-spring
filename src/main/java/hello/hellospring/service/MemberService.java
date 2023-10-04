@@ -17,10 +17,17 @@ public class MemberService {
     }
     
     public Long join(Member member){ //회원 가입
-        //같은 이름 회원 x
-        vaildateDuplicateMember(member); //중복 회원 검증
-        memberRepository.save(member);
-        return member.getId();
+        long start=System.currentTimeMillis();
+        try{
+            //같은 이름 회원 x
+            vaildateDuplicateMember(member); //중복 회원 검증
+            memberRepository.save(member);
+            return member.getId();
+        }finally { //마지막에 무조건 실행시키기 위해 try~finally 구문을 이용
+            long finish=System.currentTimeMillis();
+            long timeMs=finish-start;
+            System.out.println("join : "+timeMs);
+        }
     }
 
     private void vaildateDuplicateMember(Member member){ //회원 중복 검사
