@@ -15,7 +15,7 @@ public class AppConfig { //애플리케이션에 대한 구성 설정을 해당 
     @Bean //@Bean 애너테이션을 이용하면 스프링 빈 컨테이너에 등록된다.
     //@Bean을 사용한 모든 메소드를 호출해서 반환된 객체를 스프링 컨테이너에 등록.
     public MemberService memberService(){
-
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository()); //생성자 주입 의존관계
     }
 
@@ -23,11 +23,13 @@ public class AppConfig { //애플리케이션에 대한 구성 설정을 해당 
     public MemoryMemberRepository memberRepository() {
         //다른 service에서 memberRepository를 불러다 쓰더라도 변경 사항이 생겼을 때 리턴값만 변경해주면 된다.
         //역할이 확실하게 구분된다.
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService(){
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
