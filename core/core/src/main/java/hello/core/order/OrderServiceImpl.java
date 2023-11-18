@@ -5,7 +5,10 @@ import hello.core.discount.FixDicountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
 //    private final MemberRepository memberRepository=new MemoryMemberRepository();
@@ -22,7 +25,7 @@ public class OrderServiceImpl implements OrderService{
     //->구현 객체를 대신 생성하고 주입해 줄 수 있는 역할이 필요 ->AppConfig가 해당 역할을 수행
     //OrderServiceImpl은 실행 전에 어떤 객체가 들어올지 알 수 없고 해당 부분은 AppCofig가 지정한다.
 
-
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.discountPolicy = discountPolicy;
         this.memberRepository = memberRepository;
