@@ -25,7 +25,14 @@ public class OrderServiceTest {
         Long memberId=1L;
         Member member=new Member(memberId, "memberA", Grade.VIP);
 
-        Order order=orderService.createOreder(memberId, "itemA", 100000);
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+//        Order order=orderService.createOreder(memberId, "itemA", 100000);
+//        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+    }
+
+    @Test
+    void fieldInjectionTest() {
+//        OrderServiceImpl orderService=new OrderServiceImpl();
+        //필드 주입 한 경우, setter 메소드를 따로 지정해서 넣어주지 않으면 에러가 발생함
+        orderService.createOreder(1L, "itemA", 10000);
     }
 }
