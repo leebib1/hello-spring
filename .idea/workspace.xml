@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="000fc58c-7d18-4be3-9ae8-e2aa8eae3d2a" name="Changes" comment="spring MVC 1 폴더 생성">
-      <change afterPath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/domain/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/domain/MemberRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servlet/src/test/java/hello/servlet/domain/member/MemberRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spring-study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spring-study.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc/src/main/java/hello/springmvc/basic/LogTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +70,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/IntelliJ IDEA/spring-study/servlet/src/main/java/hello/servlet/domain",
-    "last_opened_file_path": "C:/Users/ASUS/.gradle",
+    "last_opened_file_path": "C:/IntelliJ IDEA/spring-study",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,6 +108,7 @@
       <workItem from="1708767851859" duration="210000" />
       <workItem from="1708768071712" duration="275000" />
       <workItem from="1708768356054" duration="2032000" />
+      <workItem from="1710599933954" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="spring 강의 폴더 경로 변경">
       <option name="closed" value="true" />
